@@ -1,8 +1,8 @@
 # Laravel Temp Media
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/yourvendor/laravel-temp-media.svg?style=flat-square)](https://packagist.org/packages/yourvendor/laravel-temp-media)
-[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/yourvendor/laravel-temp-media/run-tests?label=tests)](https://github.com/yourvendor/laravel-temp-media/actions?query=workflow%3Arun-tests+branch%3Amain)
-[![Total Downloads](https://img.shields.io/packagist/dt/yourvendor/laravel-temp-media.svg?style=flat-square)](https://packagist.org/packages/yourvendor/laravel-temp-media)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/bardan-io/temp-media-for-laravel.svg?style=flat-square)](https://packagist.org/packages/bardan-io/temp-media-for-laravel)
+[![GitHub Tests Action Status](https://img.shields.io/github/workflow/status/bardan-io/temp-media-for-laravel/run-tests?label=tests)](https://github.com/bardan-io/temp-media-for-laravel/actions?query=workflow%3Arun-tests+branch%3Amain)
+[![Total Downloads](https://img.shields.io/packagist/dt/bardan-io/temp-media-for-laravel.svg?style=flat-square)](https://packagist.org/packages/bardan-io/temp-media-for-laravel)
 
 A Laravel package for handling temporary media uploads with automatic cleanup, built on top of Spatie Media Library.
 
@@ -11,7 +11,7 @@ A Laravel package for handling temporary media uploads with automatic cleanup, b
 - ✅ **Two-Phase Upload Pattern** - Upload images first, associate with models later
 - ✅ **Automatic Cleanup** - TTL-based expiration and background cleanup jobs
 - ✅ **Security** - Session/user-based ownership validation
-- ✅ **Type Safety** - Full PHP 8.1+ type declarations with strict types
+- ✅ **Type Safety** - Full PHP 8.2+ type declarations with strict types
 - ✅ **Events** - Comprehensive event system for monitoring and logging
 - ✅ **Testing** - Complete test suite with factories and feature tests
 - ✅ **Configurable** - Extensive configuration options
@@ -22,7 +22,7 @@ A Laravel package for handling temporary media uploads with automatic cleanup, b
 You can install the package via composer:
 
 ```bash
-composer require yourvendor/laravel-temp-media
+composer require bardan-io/temp-media-for-laravel
 ```
 
 Publish and run the migrations:
@@ -50,7 +50,7 @@ $uploadResponse = app(TempMediaServiceInterface::class)->uploadTempMedia(
     auth()->id()
 );
 
-// 2. Create product with temp media IDs
+// 2. Create a product with temp media IDs
 $product = Product::create([
     'name' => 'My Product',
     'description' => 'Product description',
